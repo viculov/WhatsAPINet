@@ -773,7 +773,7 @@ namespace WhatsAppApi
             this.SendNode(node);
         }
 
-        public void SendSetPhoto(string jid, byte[] bytes, byte[] thumbnailBytes = null)
+        public void SendSetPhoto(byte[] bytes, byte[] thumbnailBytes = null)
         {
             string id = TicketCounter.MakeId("set_photo_");
 
@@ -795,7 +795,7 @@ namespace WhatsAppApi
             {
                 list.Add(new ProtocolTreeNode("picture", new[] { new KeyValue("type", "preview") }, null, thumbnailBytes));
             }
-            var node = new ProtocolTreeNode("iq", new[] { new KeyValue("id", id), new KeyValue("type", "set"), new KeyValue("xmlns", "w:profile:picture"), new KeyValue("to", GetJID(jid)) }, list.ToArray());
+            var node = new ProtocolTreeNode("iq", new[] { new KeyValue("id", id), new KeyValue("type", "set"), new KeyValue("xmlns", "w:profile:picture"), new KeyValue("to", GetJID(this.phoneNumber)) }, list.ToArray());
             this.SendNode(node);
         }
 
