@@ -25,9 +25,9 @@ namespace WhatsTest
             System.Console.OutputEncoding = Encoding.Default;
             System.Console.InputEncoding = Encoding.Default;
             string nickname = "WhatsApiNet";
-            string sender = "316******3"; // Mobile number with country code (but without + or 00)
-            string password = "xLl***************GSA=";//v2 password
-            string target = "316********6";// Mobile number to send the message to
+            string sender = "79623460829"; // Mobile number with country code (but without + or 00)
+            string password = "mfztYgxR5VrZJDoee6vjS+YE7XI=";//v2 password
+            string target = "79299233367";// Mobile number to send the message to
 
             WhatsApp wa = new WhatsApp(sender, password, nickname, true);
 
